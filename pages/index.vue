@@ -25,8 +25,12 @@
               </v-list-item-avatar>
 
               <v-list-item-content>
-                <v-list-item-title class="font-weight-bold" v-html="item.title" />
-                <v-list-item-subtitle v-html="item.subtitle" />
+                <v-list-item-title class="font-weight-bold">
+                  {{ item.title }}
+                </v-list-item-title>
+                <v-list-item-subtitle>
+                  {{ item.subtitle }}
+                </v-list-item-subtitle>
               </v-list-item-content>
             </v-list-item>
             <v-list-item
@@ -35,8 +39,12 @@
               class="text-right"
             >
               <v-list-item-content>
-                <v-list-item-title class="font-weight-bold" v-html="item.title" />
-                <v-list-item-subtitle v-html="item.subtitle" />
+                <v-list-item-title class="font-weight-bold">
+                  {{ item.title }}
+                </v-list-item-title>
+                <v-list-item-subtitle>
+                  {{ item.subtitle }}
+                </v-list-item-subtitle>
               </v-list-item-content>
             </v-list-item>
           </template>
@@ -136,7 +144,7 @@
 export default {
   data () {
     return {
-      drawer: true,
+      drawer: false,
       group: false,
 
       items: [
