@@ -1,0 +1,51 @@
+
+.c-app-container {
+  overflow-x: auto;
+  overflow-y: auto;
+  height: 100vh;
+  height: -webkit-fill-available;
+}
+
+.c-app {
+  &__main,
+  &__footer {
+    position: relative;
+  }
+
+  &__monitor {
+    background-color: $black;
+  }
+
+  &__footer {
+    z-index: 6;
+  }
+
+  .c-users {
+    background: linear-gradient(-90deg, rgba($black, 1), rgba($black, 0));
+    position: fixed;
+    right: 0;
+    top: 5rem;
+    width: 250px;
+    z-index: 5;
+  }
+
+  .c-user {
+    position: relative;
+    border-radius: 10px;
+
+    &__camera {
+      width: 100%;
+      height: 180px;
+      background-color: skyblue;
+    }
+
+    &__name {
+      width: 100%;
+      position: absolute;
+      color: $white;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(rgba($black, 0), rgba($black, 1));
+    }
+  }
+}

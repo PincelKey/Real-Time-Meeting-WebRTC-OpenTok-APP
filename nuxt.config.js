@@ -1,3 +1,5 @@
+import path from 'path'
+import fs from 'fs'
 import colors from 'vuetify/es5/util/colors'
 
 export default {
@@ -21,6 +23,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '~/assets/css/main.scss'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -70,5 +73,13 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+
+  server: {
+    host: '192.168.0.118',
+    https: {
+      key: fs.readFileSync(path.resolve(__dirname, 'ssl/server.key')),
+      cert: fs.readFileSync(path.resolve(__dirname, 'ssl/server.crt'))
+    }
   }
 }
